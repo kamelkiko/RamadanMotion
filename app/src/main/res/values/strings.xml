@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">RamadanMotion</string>
+    <string name="ramadan" translatable="false"> Ramadan 2023 </string>
+    <string name="ramadnhistory"> 1 Ramadan 1444</string>
+    <string name="logo">logo</string>
+    <string name="shrouk">Shrouk</string>
+    <string name="duhr">Duhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="aisha">Eisha</string>
+    <string name="_4_pages">4 Pages</string>
+</resources>

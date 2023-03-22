@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    android:padding="@dimen/normalMargin"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadanmobarak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dinner"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ramdanmain" />
+
+
+    <ImageView
+        android:id="@+id/dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/dinner"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadanConcept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/rr" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadanmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/r" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:elevation="@dimen/small_elev"
+        android:visibility="invisible"
+        app:cardCornerRadius="@dimen/large_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dinner"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/small_Stroke">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+            <TextView
+                android:id="@+id/shrouk"
+                style="@style/Prayer"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:text="@string/shrouk"
+                app:layout_constraintEnd_toEndOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/duhr"
+                style="@style/Prayer"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:text="@string/duhr"
+                app:layout_constraintEnd_toEndOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shrouk" />
+
+            <TextView
+                android:id="@+id/asr"
+                style="@style/Prayer"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:text="@string/asr"
+                app:layout_constraintEnd_toEndOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/duhr" />
+
+            <TextView
+                android:id="@+id/maghrib"
+                style="@style/Prayer"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:text="@string/maghrib"
+                app:layout_constraintEnd_toEndOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/asr" />
+
+            <TextView
+                android:id="@+id/aisha"
+                style="@style/Prayer"
+                android:layout_marginStart="@dimen/normalMargin"
+                android:text="@string/aisha"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/line"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/maghrib" />
+
+
+            <TextView
+                android:id="@+id/page_one"
+                style="@style/Prayer"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:text="@string/_4_pages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/page_two"
+                style="@style/Prayer"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:text="@string/_4_pages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/page_one" />
+
+            <TextView
+                android:id="@+id/page_three"
+                style="@style/Prayer"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:text="@string/_4_pages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/page_two" />
+
+            <TextView
+                android:id="@+id/page_four"
+                style="@style/Prayer"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:text="@string/_4_pages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/page_three" />
+
+            <TextView
+                android:id="@+id/page_five"
+                style="@style/Prayer"
+                android:layout_marginEnd="@dimen/smallMargin"
+                android:text="@string/_4_pages"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/line"
+                app:layout_constraintTop_toBottomOf="@id/page_four" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/ramdantime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/smallPadding"
+        app:layout_constraintTop_toBottomOf="@id/ramadanmain">
+
+        <TextView
+            style="@style/titleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ramadan"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            style="@style/subTitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ramadnhistory"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramdankareem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ramdantime"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ramadankareem" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
